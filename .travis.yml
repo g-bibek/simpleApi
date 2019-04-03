@@ -1,0 +1,11 @@
+language: csharp
+dist: build-output
+mono: none
+dotnet: 2.1
+
+install:
+- dotnet restore
+
+script:
+- dotnet build
+- dotnet test Api.Test/Api.Test.csproj
