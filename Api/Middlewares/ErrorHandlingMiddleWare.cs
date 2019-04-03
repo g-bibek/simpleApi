@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 
 namespace Api.Middlewares
