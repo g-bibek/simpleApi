@@ -8,3 +8,4 @@ install:
 
 script:
 - dotnet build
+- dotnet test Api.Test/Api.Test.csproj
