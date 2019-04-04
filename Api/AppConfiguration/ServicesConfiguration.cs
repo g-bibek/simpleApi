@@ -38,5 +38,19 @@ namespace Api.AppConfiguration
                 // options.SerializerSettings.DateFormatString = "MM/dd/yyyy";
             });
         }
+
+        /// <summary>
+        /// For Mobile/JS Apps: .NET Core Requires Explicit CORS policy defined.
+        /// For production explicity define this instead of "Allow Any Origin"
+        /// </summary>
+        /// <param name="services"></param>
+        public static void AddCorsPolicy(this IServiceCollection services)
+        {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("(default)",
+                builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            });
+        }
     }
 }
